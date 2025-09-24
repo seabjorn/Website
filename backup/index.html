@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Learning - Belajar Coding untuk Anak-anak</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css"> <!-- Contoh tema gelap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/hint/show-hint.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/lint/lint.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-code"></i>
+                    <span>C++ Learning</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#courses" class="nav-link">Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Tentang</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Belajar C++ dengan Menyenangkan!</h1>
+                <p class="hero-description">
+                    Teman terbaik untuk belajar bahasa pemrograman C++. 
+                    Mulai dari dasar hingga mahir dengan cara yang mudah dipahami anak-anak.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('courses')">
+                        <i class="fas fa-play"></i>
+                        Mulai Belajar
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">
+                        <i class="fas fa-info-circle"></i>
+                        Pelajari Lebih Lanjut
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-animation">
+                    <div class="code-line">
+                        <span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="keyword">int</span> <span class="function">main</span>() {
+                    </div>
+                    <div class="code-line">
+                        &nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; <span class="string">"Hello World!"</span>;
+                    </div>
+                    <div class="code-line">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="number">0</span>;
+                    </div>
+                    <div class="code-line">}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2 class="section-title">Course Pembelajaran</h2>
+            <p class="section-subtitle">Pilih level pembelajaran yang sesuai dengan kemampuanmu</p>
+            
+            <div class="courses-grid">
+                <!-- Course 1: Dasar -->
+                <div class="course-card" data-level="beginner">
+                    <div class="course-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="course-title">Dasar C++</h3>
+                    <p class="course-description">
+                        Pelajari dasar-dasar bahasa C++ mulai dari syntax, variabel, dan input/output
+                    </p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="0"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <div class="course-lessons">
+                        <h4>Materi Pembelajaran:</h4>
+                        <ul>
+                            <li>Pengenalan C++</li>
+                            <li>Variabel dan Tipe Data</li>
+                            <li>Input dan Output</li>
+                            <li>Operasi Matematika</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-course" onclick="startCourse('beginner')">
+                        Mulai Course
+                    </button>
+                </div>
+
+                <!-- Course 2: Menengah -->
+                <div class="course-card" data-level="intermediate">
+                    <div class="course-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="course-title">C++ Menengah</h3>
+                    <p class="course-description">
+                        Tingkatkan kemampuan dengan mempelajari kondisi, loop, dan fungsi
+                    </p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="0"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <div class="course-lessons">
+                        <h4>Materi Pembelajaran:</h4>
+                        <ul>
+                            <li>Kondisi If-Else</li>
+                            <li>Loop For dan While</li>
+                            <li>Fungsi dan Parameter</li>
+                            <li>Array Dasar</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-course" onclick="startCourse('intermediate')">
+                        Mulai Course
+                    </button>
+                </div>
+
+                <!-- Course 3: Lanjutan -->
+                <div class="course-card" data-level="advanced">
+                    <div class="course-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="course-title">C++ Lanjutan</h3>
+                    <p class="course-description">
+                        Kuasai konsep lanjutan seperti pointer, class, dan object-oriented programming
+                    </p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="0"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <div class="course-lessons">
+                        <h4>Materi Pembelajaran:</h4>
+                        <ul>
+                            <li>Pointer dan Memory</li>
+                            <li>Class dan Object</li>
+                            <li>Inheritance</li>
+                            <li>File Handling</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-course" onclick="startCourse('advanced')">
+                        Mulai Course
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Interface -->
+    <section id="learning" class="learning-interface" style="display: none;">
+        <div class="container">
+            <div class="learning-header">
+                <button class="btn btn-back" onclick="backToCourses()">
+                    <i class="fas fa-arrow-left"></i>
+                    Kembali ke Course
+                </button>
+                <h2 id="learning-title">Dasar C++</h2>
+                <div class="learning-progress">
+                    <span id="lesson-counter">Pelajaran 1 dari 4</span>
+                </div>
+            </div>
+
+            <div class="learning-content">
+                <div class="lesson-sidebar">
+                    <h3>Daftar Pelajaran</h3>
+                    <ul id="lesson-list">
+                        <!-- Lessons will be populated by JavaScript -->
+                    </ul>
+                </div>
+
+                <div class="lesson-main">
+                    <div class="lesson-content" id="lesson-content">
+                        <!-- Lesson content will be populated by JavaScript -->
+                    </div>
+
+                    <div class="lesson-navigation">
+                        <button class="btn btn-nav" id="prev-btn" onclick="previousLesson()" disabled>
+                            <i class="fas fa-chevron-left"></i>
+                            Sebelumnya
+                        </button>
+                        <button class="btn btn-nav btn-primary" id="next-btn" onclick="nextLesson()">
+                            Selanjutnya
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Platform Ini</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Platform pembelajaran C++ ini dirancang khusus untuk anak-anak sekolah yang ingin 
+                        memulai perjalanan mereka dalam dunia programming. Kami menggunakan pendekatan yang 
+                        menyenangkan dan interaktif agar pembelajaran menjadi lebih mudah dipahami.
+                    </p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Mudah Dipahami</h4>
+                            <p>Materi disusun khusus untuk anak-anak dengan bahasa yang sederhana</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-gamepad"></i>
+                            <h4>Interaktif</h4>
+                            <p>Belajar sambil bermain dengan contoh kode yang bisa dicoba langsung</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Progress Tracking</h4>
+                            <p>Pantau kemajuan belajar dengan sistem progress yang jelas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>C++ Learning</h3>
+                    <p>Platform pembelajaran coding terbaik untuk anak-anak</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#courses">Course</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p>Email: Ihsanrsd18@gmail.com</p>
+                    <p>Phone: +62 123 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 C++ Learning. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/clike/clike.min.js"></script> <!-- Mode C++ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/hint/anyword-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/lint/lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/lint/json-lint.min.js"></script> <!-- Contoh linter, bisa disesuaikan -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
